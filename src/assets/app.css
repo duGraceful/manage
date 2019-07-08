@@ -1,0 +1,431 @@
+@font-face {
+  font-family: BASE;
+  src: url('/static/font/SF-Light.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+  font-family: BASE;
+}
+
+html {
+  font-size: 12px;
+  cursor: default;
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  height: 100%;
+  margin: 0 auto;
+  min-width: 1000px;
+  background-color: #ECF4FA;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:focus {
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+img[lazy=loading] {
+  opacity: 0;
+  max-height: 100%;
+}
+
+img[lazy=loaded],
+img[lazy=error] {
+  opacity: 1;
+  transition: opacity .5s ease;
+}
+
+img[lazy=error] {
+  background-image: url(//files.eyee.com/mcdn/static/img/error.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+}
+
+/* input,input:focus,textarea,textarea:focus{padding:3px 5px;border: none;outline: none;} */
+/*input,button,select,textarea{outline:none}*/
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+em {
+  font-style: normal;
+}
+
+body.lock {
+  height: 100%;
+  overflow: hidden;
+}
+
+button:not(:disabled):hover {
+  opacity: .88;
+}
+
+#app {
+  font-family: BASE;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ECF4FA;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex,
+[class*=" flex-"],
+[class^=flex-] {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-aic {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-tops {
+  justify-content: flex-start;
+  align-items: end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-end {
+  justify-content: flex-end !important;
+  align-items: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-around {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-ctr-end {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.flex-aic-end {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.subtitile-con {
+  padding: 20px 22px;
+  background: #fff;
+  width: 100%;
+  font-size: 16px;
+}
+
+.icon,
+[class*=" icon-"],
+[class^=icon-] {
+  position: relative;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  margin: 0 10px;
+}
+
+/* .icon-add{
+  width: 20px;
+  height: 20px;
+  background-image: url('/static/img/addnew.png')
+}
+.icon-updown{
+  width: 17px;
+  height: 14px;
+  background-image: url('/static/img/sorting_default.png');
+  margin: 0;
+}
+.icon-sortUp{
+  width: 17px;
+  height: 14px;
+  background-image: url('/static/img/sorting_up.png');
+  margin: 0;
+}
+.icon-sortDown{
+  width: 17px;
+  height: 14px;
+  background-image: url('/static/img/sorting_down.png');
+  margin: 0;
+}
+.icon-editor{
+  width: 18px;
+  height: 18px;
+  background-image: url('/static/img/edit.png')
+}
+.icon-editor-white{
+  width: 18px;
+  height: 18px;
+  background-image: url('/static/img/edit_2.png')
+}
+.icon-check{
+  width: 27px;
+  height: 27px;
+  background-image: url('/static/img/success.png')
+}
+.icon-product-label{
+  background-position: 10px center ;
+  background-size: 16px 15px;
+  background-image: url('/static/img/topic_label3.png')
+}
+.icon-brand-label{
+  background-position: 10px center ;
+  background-size: 16px 15px;
+  background-image: url('/static/img/topic_label2.png')
+}
+.icon-other-label{
+  background-position: 10px center ;
+  background-size: 16px 15px;
+  background-image: url('/static/img/topic_label1.png')
+} */
+.table-box {
+  margin: 20px 0 50px;
+}
+
+.table-box table {
+  border-width: 1px;
+  border-color: #eee;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.table-box table thead th {
+  height: 40px;
+  background-color: #929bb5;
+  color: #fff;
+  font-size: 16px;
+  border-right: 1px solid #eee;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table-box table thead th img {
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+}
+
+.table-box table tbody tr {
+
+  border-bottom: 1px solid #eee;
+}
+
+.table-box table tbody tr:hover {
+  background-color: #e2e9ef;
+}
+
+.table-box table tbody td {
+  border-right: 1px solid #eee;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+}
+
+.table-box table tbody td>span {
+  margin: 0 4px;
+}
+
+.reason-tips {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pagetion-box {
+  height: 40px;
+  text-align: right;
+}
+
+.fontS-18 {
+  font-size: 18px;
+}
+
+.color-red {
+  color: #F91414;
+}
+
+.color-orange {
+  color: #ff9933;
+}
+
+.color-blue {
+  color: #2f5ac9;
+}
+
+.textCen {
+  text-align: center;
+}
+
+.cur-pointer {
+  cursor: pointer;
+}
+
+.ellipse,
+[class*=" ellip-"],
+[class^=ellip-] {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.nodata-box {
+  height: 80px;
+}
+
+/**
+通过，不通过按钮样式
+*/
+.pass-butn,
+.nopass-butn {
+  display: inline-block;
+  padding: 0 15px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border: 1px solid #ff9933;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pass-butn {
+  background: #ff9933;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.nopass-butn {
+  color: #ff9933;
+}
+
+span.goBackBtun {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 10px;
+  margin-left: 20px !important;
+  background-color: #929BB5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.first-Tit {
+  font-size: 17px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/** 页面头部筛选  */
+.subtitile-con .sub-group {
+  margin-right: 40px;
+}
+
+.subtitile-con .sub-group input {
+  border: 1px solid #dcdfe6;
+  width: 160px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.subtitile-con .sub-group input.el-input__inner {
+  width: 220px;
+}
+
+.subtitile-con .sub-group span.mid-span {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+/**列表状态筛选  样式*/
+.status-list {
+  margin: 20px 0 20px;
+}
+
+.status-list>span {
+  display: inline-block;
+  min-width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  margin-right: 15px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+}
+
+.status-list span.selected {
+  background-color: #ff9933;
+  color: #fff;
+}
+
+/* 公共组件不通过原因样式 */
+.nopassdialog-span {
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.nopassdialog-select {
+  width: 100%;
+}
+
+.nopassdialog-select .el-select {
+  width: 100%;
+}
